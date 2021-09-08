@@ -1,0 +1,2 @@
+https://dms-data.stanford.edu/data/manifests/Parker/qw038wz9710/manifest.json
+https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100057807671.0x000001/manifest.json
