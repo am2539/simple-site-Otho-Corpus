@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Simple system for creating a set of web-pages to support your GitHub repository from a few simple json files." />
+		<meta name="keywords" content="The National Gallery, London, National Gallery London, Scientific, Research, Heritage, Culture, JSON, PHP, Javascript, Github Pages, Dissemination, VRE, IIIF, Mermaid, Timeline, Mirador " />
+    <meta name="author" content="Joseph Padfield| joseph.padfield@ng-london.org.uk |National Gallery | London UK | website@ng-london.org.uk |www.nationalgallery.org.uk" />
+    <meta name="image" content="" />
+    <link rel="icon" href="graphics/favicon.ico">
+    <title>NG Simple Site - index</title>
+    
+	<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous" rel="stylesheet" type="text/css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.css" integrity="sha256-BNdodQbWHpU3HT8xGhkEusT4ch4HEjvwzcbDcVuHR+E=" crossorigin="anonymous" rel="stylesheet" type="text/css">
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+    <style>
+    .openseadragon
+{
+    
+    height:     500px;
+    border:     1px solid black;
+    color:      #333; /* text color for messages */
+    background-color: black;
+}
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics - Only added in if the 'GoogleAnalyticsID' i set in the site.json file-->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-BQV11QKCED"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-BQV11QKCED');
+	</script>
+  </head>
+
+  <body onload="onLoad();">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<div class="container-fluid">
+      <button 
+				class="navbar-toggler navbar-toggler-right" 
+				type="button" 
+				data-bs-toggle="collapse" 
+				data-bs-target="#navbarsExampleDefault" 
+				aria-controls="navbarsExampleDefault" 
+				aria-expanded="false" 
+				aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>    
+      <a class="navbar-brand"  href="./">
+  		<img id="page-logo" class="logo" title="Logo" src="graphics/ng-logo-white-100x40.png" 
+				style="" alt="The National Gallery"/>
+		  </a>
+			<div class="collapse navbar-collapse" id="navbarsExampleDefault"><ul class="navbar-nav">
+<li class="nav-item active"><a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a></li><li class="nav-item "><a class="nav-link" href="Mirador%20viewer.html">Mirador viewer</a></li>
+<li class="nav-item dropdown ">
+<!-- Dropdown Loop 1 -->
+<div class="btn-group">
+  <a href="Technical%20Information.html"><button type="button" class="btn nav-link" title="Click to open the &ldquo;Technical Information&rdquo; page">
+  Technical Information</button></a>
+  <button type="button" class="btn nav-link dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"  title="Click to open the &ldquo;Technical Information&rdquo; menu">
+    <span class="visually-hidden">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu"><li><a href="Introduction.html" class="dropdown-item">Introduction</a></li><li><a href="Instructions.html" class="dropdown-item">Instructions</a></li><!-- Dropdown Loop 2 --><li class="dropdown-submenu">
+		<a id="dropdownMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle" title="Click to open the &ldquo;JSON&rdquo; menu">JSON
+		&nbsp;&nbsp;<i class="fas fa-caret-right"></i></a>
+		
+		<ul aria-labelledby="dropdownMenu2" class="dropdown-menu border-0 shadow">
+			<li><a href="JSON.html" class="dropdown-item  top-item" title="Click to open the &ldquo;JSON&rdquo; page">
+				JSON</a></li>
+		<li class="dropdown-divider"></li><li><a href="site.json.html" class="dropdown-item">Site.json</a></li><li><a href="pages.json.html" class="dropdown-item">Pages.json</a></li></ul></li><!-- End Loop 2 --><!-- Dropdown Loop 2 --><li class="dropdown-submenu">
+		<a id="dropdownMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle" title="Click to open the &ldquo;Extensions&rdquo; menu">Extensions
+		&nbsp;&nbsp;<i class="fas fa-caret-right"></i></a>
+		
+		<ul aria-labelledby="dropdownMenu2" class="dropdown-menu border-0 shadow">
+			<li><a href="Extensions.html" class="dropdown-item  top-item" title="Click to open the &ldquo;Extensions&rdquo; page">
+				Extensions</a></li>
+		<li class="dropdown-divider"></li><li><a href="Mirador.html" class="dropdown-item">Mirador</a></li></ul></li><!-- End Loop 2 --></ul></li><!-- End Loop 1 --><li class="nav-item "><a class="nav-link" href="about.html">About</a></li></ul></div></li>
+			
+    <span class="navbar-text">
+      			<a href="https://github.com/am2539/simple-site-template/">
+				<img id="ex-logo1" class="logo" title="github" src="graphics/github logo white.png" 
+				style="" alt="GitHub am2539 Simple-site Template"/>
+		  </a>
+    </span>
+</div>
+    </nav>
+			<div class="row ">				
+			 <div class="col-12 col-md-12">          
+				
+				<div class="p-2 bg-light border rounded-3 jumbotron">
+      <div class="container-fluid py-4"><h3>INSERT TITLE HERE</h3></div></div><div class="row"><div class="col-12 col-lg-12"></div><!--/span--></div><!--/row-->    <div class="row"><div class="col-lg-6"><p><h2>Text</h2></p><p>INSERT TEXT HERE.</p><p>    </p><p>    </p><p>    </p>N.B. The logos used on this page and the link to the Github repository above can all be modified. See <a href='site.json.html'>site.json</a> in the Technical Information section for further details.<div class="foonote"><ul></ul></div></div><!--/span--><div class="col-lg-6"><p><h2>Images</h2></p><p>TO ADD AN IMAGE TO A PAGE THERE ARE TWO OPTIONS:</p> <p><b>To insert a static image:</b></p><p>Replace the URL in the centre of this code and update the alternative text and caption (if either is desired): <figure class="figure"><img src="https://raw.githubusercontent.com/am2539/simple-site-template/master/docs/graphics/images/Static_Image_Example.png" class="figure-img img-fluid rounded" alt="This is where you can add the alternative text for the image"><figcaption class="figure-caption">There is also the option to add a caption to any image.</figcaption></figure></p><p><b>To insert a 'zoom-able' image:</b></p> <p> First, you need a IIIF manifest. Ensure you have <b>"class":"openseardragon"</b> and <b>"file":"IIIF manifest goes here"</b> enabled on the page on which you'd like to display the image.</p><p>Given the above conditions you can use this code, amended as you'd like to display the desired image: <figure class="figure"><div class="row" style="padding-left:16px;padding-right:16px;"><div class="col-12 col-lg-12"><div id="openseadragonviewerdiv" class="openseadragon"></div></div></div><figcaption style="padding-left:16px;padding-right:16px;" class="figure-caption">Peter Paul Rubens, Saint Bavo is received by Saints Amand and Floribert © The National Gallery, London. Holwell Carr Bequest, 1831. This image is licensed under <a href='https://creativecommons.org/licenses/by-nc-nd/4.0/'>CC-BY-NC-ND 4.0</a>.</figcaption></figure><div class="foonote"><ul></ul></div></div><!--/span--></div><!--/row-->    <div class="row"><div class="col-12 col-lg-12">	<hr/>
+	<style>
+	details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: .5em .5em 0;
+}
+
+summary {
+    font-weight: bold;
+    margin: -.5em -.5em 0;
+    padding: .5em;
+}
+
+details[open] {
+    padding: .5em;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: .5em;
+}
+	</style>
+	<details>
+	<summary>Display the full code used to define this page.</summary>
+	<br/>
+		<h3>Page JSON Object</h3>
+	<figure>
+		<pre style="overflow-y: auto;overflow-x: hidden; border: 2px solid black;padding: 10px;max-height:400px;"><code>{
+    &quot;parent&quot;: &quot;&quot;,
+    &quot;class&quot;: &quot;openseadragon&quot;,
+    &quot;file&quot;: &quot;https://media.ng-london.org.uk/ng/NG57.1&quot;,
+    &quot;title&quot;: &quot;INSERT TITLE HERE&quot;,
+    &quot;content&quot;: &quot;&lt;p&gt;&lt;h2&gt;Text&lt;/h2&gt;&lt;/p&gt;&lt;p&gt;INSERT TEXT HERE.&lt;/p&gt;&lt;p&gt;    &lt;/p&gt;&lt;p&gt;    &lt;/p&gt;&lt;p&gt;    &lt;/p&gt;N.B. The logos used on this page and the link to the Github repository above can all be modified. See [site.json|site.json.html] in the Technical Information section for further details.&quot;,
+    &quot;content right&quot;: &quot;&lt;p&gt;&lt;h2&gt;Images&lt;/h2&gt;&lt;/p&gt;&lt;p&gt;TO ADD AN IMAGE TO A PAGE THERE ARE TWO OPTIONS:&lt;/p&gt; &lt;p&gt;&lt;b&gt;To insert a static image:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Replace the URL in the centre of this code and update the alternative text and caption (if either is desired): &lt;figure class=\&quot;figure\&quot;&gt;&lt;img src=\&quot;https://raw.githubusercontent.com/am2539/simple-site-template/master/docs/graphics/images/Static_Image_Example.png\&quot; class=\&quot;figure-img img-fluid rounded\&quot; alt=\&quot;This is where you can add the alternative text for the image\&quot;&gt;&lt;figcaption class=\&quot;figure-caption\&quot;&gt;There is also the option to add a caption to any image.&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;To insert a 'zoom-able' image:&lt;/b&gt;&lt;/p&gt; &lt;p&gt; First, you need a IIIF manifest. Ensure you have &lt;b&gt;\&quot;class\&quot;:\&quot;openseardragon\&quot;&lt;/b&gt; and &lt;b&gt;\&quot;file\&quot;:\&quot;IIIF manifest goes here\&quot;&lt;/b&gt; enabled on the page on which you'd like to display the image.&lt;/p&gt;&lt;p&gt;Given the above conditions you can use this code, amended as you'd like to display the desired image: &lt;figure class=\&quot;figure\&quot;&gt;&lt;div class=\&quot;row\&quot; style=\&quot;padding-left:16px;padding-right:16px;\&quot;&gt;&lt;div class=\&quot;col-12 col-lg-12\&quot;&gt;&lt;div id=\&quot;openseadragonviewerdiv\&quot; class=\&quot;openseadragon\&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;figcaption style=\&quot;padding-left:16px;padding-right:16px;\&quot; class=\&quot;figure-caption\&quot;&gt;Peter Paul Rubens, Saint Bavo is received by Saints Amand and Floribert \u00a9 The National Gallery, London. Holwell Carr Bequest, 1831. This image is licensed under &lt;a href='https://creativecommons.org/licenses/by-nc-nd/4.0/'&gt;CC-BY-NC-ND 4.0&lt;/a&gt;.&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=\&quot;foonote\&quot;&gt;&lt;ul&gt;&lt;/ul&gt;&lt;/div&gt;&quot;,
+    &quot;displaycode&quot;: true
+}</code></pre>
+		<figcaption class=\"figure-caption\">The complete JSON object used to define this content and layout of this page.</figcaption>
+	</figure>		<h3>Extra extension file</h3>
+	<figure>
+		<pre style="overflow-y: auto;overflow-x: hidden; border: 2px solid black;padding: 10px;max-height:400px;"><code>{
+    &quot;@context&quot;: &quot;http://iiif.io/api/presentation/2/context.json&quot;,
+    &quot;@id&quot;: &quot;https://media.ng-london.org.uk/wz-info/NG57.1&quot;,
+    &quot;@type&quot;: &quot;sc:Manifest&quot;,
+    &quot;label&quot;: &quot;Saint Bavo is received by Saints Amand and Floribert&quot;,
+    &quot;license&quot;: &quot;https://www.nationalgallery.org.uk/terms-of-use&quot;,
+    &quot;attribution&quot;: &quot;\&quot;&lt;a href=\\\&quot;/artists/peter-paul-rubens\\\&quot;&gt;Peter Paul Rubens&lt;/a&gt;\&quot;&quot;,
+    &quot;logo&quot;: &quot;https://research.ng-london.org.uk/ng/graphics/ng_logo_tr_125.png&quot;,
+    &quot;metadata&quot;: [
+        {
+            &quot;label&quot;: &quot;Image Description&quot;,
+            &quot;value&quot;: &quot;&lt;p&gt;These three oil paintings are preliminary sketches, or modelli, for an altarpiece that was commissioned by Bishop Maes around 1611 for St Bavo&amp;rsquo;s Cathedral, Ghent. Although it was used as a plan, the central panel is highly detailed and vividly coloured. It is thought this is the sketch Rubens referred to in 1614 when he wrote to the Archduke Albert, asking for his help in securing the commission after the death of Bishop Maes caused a delay to its progress.&lt;/p&gt;&lt;p&gt;The central panel shows Saint Bavo, a Roman solider who defied the edict of the Emperor Mauritius by renouncing his role in the military and becoming a monk in the Christian Church (before his conversion, he was called Count Allowin of Haspengouw). This story was recounted in a biography of the saint that appeared in 1583, written by the theologian Joannes Molanus. In Rubens&amp;rsquo;s picture, Saint Bavo&amp;rsquo;s worldly possessions are given away &amp;ndash; his riches are being offered to a group of beggars &amp;ndash; as he is received into the Benedictine Order by Saints Amand and Floribert. A cleric holds a black habit for him to wear instead of his armour.&lt;/p&gt;&lt;p&gt;The left panel of the altarpiece depicts Saint Bavo&amp;rsquo;s sisters, Saints Gertrude and Begga, who followed in their brother&amp;rsquo;s footsteps by becoming nuns. Gertrude tilts her head back and raises her eyes as if towards heaven; Begga leans towards her companion, who wears a white headdress; this may be Saint Bavo&amp;rsquo;s daughter, Saint Agletrude. The women are surrounded by a group of onlookers, most of whom gaze towards the scene in the central panel. In the right panel, King Clothar and his son King Dagobert argue with a herald of the Emperor. The man thrusts a scroll towards the kings that contains an edict from Mauritius, forbidding his soldiers from entering the Church.&lt;/p&gt;&lt;p&gt;There are some pentimenti in the oil sketches, which can primarily be seen using X-radiography and infrared reflectography. In the central panel, for example, the face of the deacon who stands behind Saint Amand has been altered, and there may have been the head and hand of another beggar just to the left of the man who hands out Saint Bavo&amp;rsquo;s money. The positions of some of the children surrounding the mother in the foreground have also been changed.&lt;/p&gt;&quot;
+        }
+    ],
+    &quot;description&quot;: &quot;-&quot;,
+    &quot;viewingDirection&quot;: &quot;left-to-right&quot;,
+    &quot;viewingHint&quot;: &quot;individuals&quot;,
+    &quot;sequences&quot;: [
+        {
+            &quot;@id&quot;: &quot;https://media.ng-london.org.uk/public/manifests/sequence/normal.json&quot;,
+            &quot;@type&quot;: &quot;sc:Sequence&quot;,
+            &quot;label&quot;: &quot;Normal Order&quot;,
+            &quot;canvases&quot;: [
+                {
+                    &quot;@id&quot;: &quot;https://media.ng-london.org.uk/ng-iiif?IIIF=/fronts/N-0057-01-000056-WZ-PYR.tif/info.json&quot;,
+                    &quot;@type&quot;: &quot;sc:Canvas&quot;,
+                    &quot;label&quot;: &quot;Saint Bavo is received by Saints Amand and Floribert&quot;,
+                    &quot;height&quot;: 6000,
+                    &quot;width&quot;: 4676,
+                    &quot;images&quot;: [
+                        {
+                            &quot;@type&quot;: &quot;oa:Annotation&quot;,
+                            &quot;motivation&quot;: &quot;sc:painting&quot;,
+                            &quot;resource&quot;: {
+                                &quot;@id&quot;: &quot;https://media.ng-london.org.uk/ng-iiif?IIIF=/fronts/N-0057-01-000056-WZ-PYR.tif/full/full/0/default.jpg&quot;,
+                                &quot;@type&quot;: &quot;dctypes:Image&quot;,
+                                &quot;format&quot;: &quot;image/jpeg&quot;,
+                                &quot;height&quot;: 6000,
+                                &quot;width&quot;: 4676,
+                                &quot;service&quot;: {
+                                    &quot;@context&quot;: &quot;http://iiif.io/api/image/2/context.json&quot;,
+                                    &quot;@id&quot;: &quot;https://media.ng-london.org.uk/ng-iiif?IIIF=/fronts/N-0057-01-000056-WZ-PYR.tif&quot;,
+                                    &quot;profile&quot;: &quot;http://iiif.io/api/image/2/level2.json&quot;
+                                }
+                            },
+                            &quot;on&quot;: &quot;https://media.ng-london.org.uk/ng-iiif?IIIF=/fronts/N-0057-01-000056-WZ-PYR.tif/info.json&quot;
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}</code></pre>
+		<figcaption class=\"figure-caption\">The complete extension file used to define extra content included in this page.</figcaption>
+	</figure>	
+	</details></div><!--/span--></div><!--/row-->    <br/>
+			</div><!--/span-->
+			
+			
+			</div><!--/row-->
+			
+			  <footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-5" style="text-align:left;">&copy; The National Gallery 2021</div>
+				<div class="col-2" style="text-align:center;"></div>
+				<div class="col-5" style="text-align:right;"><a href='http://rightsstatements.org/vocab/InC-EDU/1.0/'><img height='16' alt='In Copyright - Educational Use Permitted' title='In Copyright - Educational Use Permitted' src='graphics/InC-EDU.dark-white-interior-blue-type.png'/></a><a rel='license' href='https://creativecommons.org/licenses/by-nc/4.0/'><img alt='Creative Commons Licence' style='border-width:0' src='https://i.creativecommons.org/l/by-nc/4.0/88x31.png' /></a></div>
+			</div>
+		</div>        
+  </footer>
+    </div><!--/.container-->
+    
+    
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/tether@2.0.0/dist/js/tether.min.js" integrity="sha256-cExSEm1VrovuDNOSgLk0xLue2IXxIvbKV1gXuCqKPLE=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha256-d+FygkWgwt59CFkWPuCB4RE6p1/WiUYCy16w1+c5vKk=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/openseadragon@2.4.2/build/openseadragon/openseadragon.min.js" integrity="sha256-NMxPj6Qf1CWCzNQfKoFU8Jx18ToY4OWgnUO1cJWTWuw=" crossorigin="anonymous"></script>
+    <script>
+				$(function() {
+
+var myOSDInstance = OpenSeadragon({
+					id:            "openseadragonviewerdiv",
+          prefixUrl:     "https://openseadragon.github.io/openseadragon/images/",
+          sequenceMode:  true,
+          tileSources:   ["https://media.ng-london.org.uk/ng-iiif?IIIF=/fronts/N-0057-01-000056-WZ-PYR.tif/info.json",
+]
+          });  
+     });
+			function onLoad() {
+				$(function() {
+  // ------------------------------------------------------- //
+  // Multi Level dropdowns
+  // ------------------------------------------------------ //
+  $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    $(this).siblings().toggleClass("show");
+
+
+    if (!$(this).next().hasClass('show')) {
+      $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+    }
+    $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+      $('.dropdown-submenu .show').removeClass("show");
+    });
+
+  });
+});
+				}
+    </script>
+  </body>
+</html>
