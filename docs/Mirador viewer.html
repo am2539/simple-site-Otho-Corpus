@@ -118,7 +118,7 @@ details[open] summary {
 		<pre style="overflow-y: auto;overflow-x: hidden; border: 2px solid black;padding: 10px;max-height:400px;"><code>{
     &quot;parent&quot;: &quot;&quot;,
     &quot;class&quot;: &quot;mirador&quot;,
-    &quot;file&quot;: &quot;mirador.json&quot;,
+    &quot;file&quot;: &quot;mirador-complex.json&quot;,
     &quot;title&quot;: &quot;Simple Site - The &lt;b&gt;IIIF Mirador Extension&lt;/b&gt;&quot;,
     &quot;content&quot;: &quot;&lt;p&gt;This extension uses the [IIIF|https://iiif.io] image viewer [Mirador|https://projectmirador.org/] to produce a customised presentation of a bespoke selection of IIIF manifests[@@IIIF manifests are simply a structured list of web based images resources that can be viewed in a IIIF compliant viewer, for more details see https://iiif.io/api/presentation/2.1/#table-of-contents]. It is an example of a special page that can be added to the [pages.json|pages.json.html] file. To change the objects displayed in the viewer, modify the &lt;b&gt;mirador.json&lt;/b&gt; file found in the build folder in your Github Repository. Further information on the function of the viewer can be found under [Extensions|Mirador.html] in the Technical Information section of this page.&lt;/p&gt;\r\n\r\n&lt;h3&gt;The Example&lt;/h3&gt;\r\n&lt;div class=\&quot;row\&quot; style=\&quot;padding-left:16px;padding-right:16px;\&quot;&gt;&lt;div class=\&quot;col-12 col-lg-12\&quot;&gt;&lt;div style=\&quot;height:500px;position:relative\&quot; id=\&quot;mirador\&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;\r\n&lt;br/&gt;\r\n&quot;,
     &quot;content right&quot;: &quot;&quot;,
@@ -132,20 +132,42 @@ details[open] summary {
         &quot;https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100057807671.0x000001/manifest.json&quot;: {
             &quot;provider&quot;: &quot;The British Library&quot;
         },
+        &quot;https://raw.githubusercontent.com/am2539/test-repository/master/Otho-Cotton%20Gospels&quot;: {
+            &quot;provider&quot;: &quot;am2539/test repository&quot;
+        },
         &quot;https://dms-data.stanford.edu/data/manifests/Parker/qw038wz9710/manifest.json&quot;: {
             &quot;provider&quot;: &quot;The Parker Library, Corpus Christi College, Cambridge&quot;
         }
     },
     &quot;windows&quot;: [
         {
-            &quot;manifestId&quot;: &quot;https://dms-data.stanford.edu/data/manifests/Parker/qw038wz9710/manifest.json&quot;,
-            &quot;canvasIndex&quot;: 14
+            &quot;id&quot;: &quot;a&quot;,
+            &quot;manifestId&quot;: &quot;https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100057807671.0x000001/manifest.json&quot;,
+            &quot;canvasIndex&quot;: 142
         },
         {
-            &quot;manifestId&quot;: &quot;https://dms-data.stanford.edu/data/manifests/Parker/qw038wz9710/manifest.jsonn&quot;,
-            &quot;canvasIndex&quot;: 69
+            &quot;id&quot;: &quot;b&quot;,
+            &quot;manifestId&quot;: &quot;https://raw.githubusercontent.com/am2539/test-repository/master/Otho-Cotton%20Gospels&quot;,
+            &quot;canvasIndex&quot;: 0
+        },
+        {
+            &quot;id&quot;: &quot;c&quot;,
+            &quot;manifestId&quot;: &quot;https://dms-data.stanford.edu/data/manifests/Parker/qw038wz9710/manifest.json&quot;,
+            &quot;canvasIndex&quot;: 0
         }
-    ]
+    ],
+    &quot;workspace&quot;: {
+        &quot;layout&quot;: {
+            &quot;direction&quot;: &quot;row&quot;,
+            &quot;first&quot;: &quot;a&quot;,
+            &quot;second&quot;: {
+                &quot;first&quot;: &quot;b&quot;,
+                &quot;second&quot;: &quot;c&quot;,
+                &quot;direction&quot;: &quot;row&quot;
+            },
+            &quot;splitPercentage&quot;: 33.33
+        }
+    }
 }</code></pre>
 		<figcaption class=\"figure-caption\">The complete extension file used to define extra content included in this page.</figcaption>
 	</figure>	
@@ -176,10 +198,10 @@ details[open] summary {
 
 var myMiradorInstance = Mirador.viewer({
        id: "mirador",
-       windows: [{"manifestId":"https:\/\/dms-data.stanford.edu\/data\/manifests\/Parker\/qw038wz9710\/manifest.json","canvasIndex":14},{"manifestId":"https:\/\/dms-data.stanford.edu\/data\/manifests\/Parker\/qw038wz9710\/manifest.jsonn","canvasIndex":69}],
-       manifests: {"https:\/\/api.bl.uk\/metadata\/iiif\/ark:\/81055\/vdc_100057807671.0x000001\/manifest.json":{"provider":"The British Library"},"https:\/\/dms-data.stanford.edu\/data\/manifests\/Parker\/qw038wz9710\/manifest.json":{"provider":"The Parker Library, Corpus Christi College, Cambridge"}},
+       windows: [{"id":"a","manifestId":"https:\/\/api.bl.uk\/metadata\/iiif\/ark:\/81055\/vdc_100057807671.0x000001\/manifest.json","canvasIndex":142},{"id":"b","manifestId":"https:\/\/raw.githubusercontent.com\/am2539\/test-repository\/master\/Otho-Cotton%20Gospels","canvasIndex":0},{"id":"c","manifestId":"https:\/\/dms-data.stanford.edu\/data\/manifests\/Parker\/qw038wz9710\/manifest.json","canvasIndex":0}],
+       manifests: {"https:\/\/api.bl.uk\/metadata\/iiif\/ark:\/81055\/vdc_100057807671.0x000001\/manifest.json":{"provider":"The British Library"},"https:\/\/raw.githubusercontent.com\/am2539\/test-repository\/master\/Otho-Cotton%20Gospels":{"provider":"am2539\/test repository"},"https:\/\/dms-data.stanford.edu\/data\/manifests\/Parker\/qw038wz9710\/manifest.json":{"provider":"The Parker Library, Corpus Christi College, Cambridge"}},
        
-       
+       workspace: {"layout":{"direction":"row","first":"a","second":{"first":"b","second":"c","direction":"row"},"splitPercentage":33.33}}
        });     
      });
 			function onLoad() {
