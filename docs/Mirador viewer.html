@@ -82,96 +82,12 @@
 			 <div class="col-12 col-md-12">          
 				
 				<div class="p-2 bg-light border rounded-3 jumbotron">
-      <div class="container-fluid py-4"><h3>Simple Site - The <b>IIIF Mirador Extension</b></h3></div></div><div class="row"><div class="col-12 col-lg-12"></div><!--/span--></div><!--/row-->    <div class="row"><div class="col-12 col-lg-12"><p>This extension uses the <a href='https://iiif.io'>IIIF</a> image viewer <a href='https://projectmirador.org/'>Mirador</a> to produce a customised presentation of a bespoke selection of IIIF manifests<sup><a id="ref1" href="#section1">[1]</a></sup>. It is an example of a special page that can be added to the <a href='pages.json.html'>pages.json</a> file. To change the objects displayed in the viewer, modify the <b>mirador.json</b> file found in the build folder in your Github Repository. Further information on the function of the viewer can be found under <a href='Mirador.html'>Extensions</a> in the Technical Information section of this page.</p>
+      <div class="container-fluid py-4"><h3>Simple Site - The <b>IIIF Mirador Extension</b></h3></div></div><div class="row"><div class="col-12 col-lg-12"></div><!--/span--></div><!--/row-->    <div class="row"><div class="col-12 col-lg-12"><p>This page serves to simultaneous present the two main codices - British Library Cotton MS Otho C V (at left) and Corpus Christi College, Cambridge, MS 197b (at right) along with the recombined Gospel book featured in the centre. The reconstructed codice was created using the IIIF manifests from both institutions and the Bodleian's IIIF Manifest Editor, available at <a href='https://digital.bodleian.ox.ac.uk/manifest-editor/'>https://digital.bodleian.ox.ac.uk/manifest-editor/</a>. In the combined digital object, folio and page numbering have been preserved from each instituion to facilite cross collection comparison, and a table of contents has been provided which shall serve to help the user navigate through the four gospels in their canonical order.</p>
 
-<h3>The Example</h3>
+<h3>The Viewer</h3>
 <div class="row" style="padding-left:16px;padding-right:16px;"><div class="col-12 col-lg-12"><div style="height:500px;position:relative" id="mirador"></div></div></div>
 <br/>
-<div class="foonote"><ul><hr/><li id="section1"><a href="#ref1">[1]</a> IIIF manifests are simply a structured list of web based images resources that can be viewed in a IIIF compliant viewer, for more details see <a href='https://iiif.io/api/presentation/2.1/#table-of-contents'>https://iiif.io/api/presentation/2.1/#table-of-contents</a></li></ul></div></div><!--/span--></div><!--/row-->    <div class="row"><div class="col-12 col-lg-12">	<hr/>
-	<style>
-	details {
-    border: 1px solid #aaa;
-    border-radius: 4px;
-    padding: .5em .5em 0;
-}
-
-summary {
-    font-weight: bold;
-    margin: -.5em -.5em 0;
-    padding: .5em;
-}
-
-details[open] {
-    padding: .5em;
-}
-
-details[open] summary {
-    border-bottom: 1px solid #aaa;
-    margin-bottom: .5em;
-}
-	</style>
-	<details>
-	<summary>Display the full code used to define this page.</summary>
-	<br/>
-		<h3>Page JSON Object</h3>
-	<figure>
-		<pre style="overflow-y: auto;overflow-x: hidden; border: 2px solid black;padding: 10px;max-height:400px;"><code>{
-    &quot;parent&quot;: &quot;&quot;,
-    &quot;class&quot;: &quot;mirador&quot;,
-    &quot;file&quot;: &quot;mirador-complex.json&quot;,
-    &quot;title&quot;: &quot;Simple Site - The &lt;b&gt;IIIF Mirador Extension&lt;/b&gt;&quot;,
-    &quot;content&quot;: &quot;&lt;p&gt;This extension uses the [IIIF|https://iiif.io] image viewer [Mirador|https://projectmirador.org/] to produce a customised presentation of a bespoke selection of IIIF manifests[@@IIIF manifests are simply a structured list of web based images resources that can be viewed in a IIIF compliant viewer, for more details see https://iiif.io/api/presentation/2.1/#table-of-contents]. It is an example of a special page that can be added to the [pages.json|pages.json.html] file. To change the objects displayed in the viewer, modify the &lt;b&gt;mirador.json&lt;/b&gt; file found in the build folder in your Github Repository. Further information on the function of the viewer can be found under [Extensions|Mirador.html] in the Technical Information section of this page.&lt;/p&gt;\r\n\r\n&lt;h3&gt;The Example&lt;/h3&gt;\r\n&lt;div class=\&quot;row\&quot; style=\&quot;padding-left:16px;padding-right:16px;\&quot;&gt;&lt;div class=\&quot;col-12 col-lg-12\&quot;&gt;&lt;div style=\&quot;height:500px;position:relative\&quot; id=\&quot;mirador\&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;\r\n&lt;br/&gt;\r\n&quot;,
-    &quot;content right&quot;: &quot;&quot;,
-    &quot;displaycode&quot;: true
-}</code></pre>
-		<figcaption class=\"figure-caption\">The complete JSON object used to define this content and layout of this page.</figcaption>
-	</figure>		<h3>Extra extension file</h3>
-	<figure>
-		<pre style="overflow-y: auto;overflow-x: hidden; border: 2px solid black;padding: 10px;max-height:400px;"><code>{
-    &quot;manifests&quot;: {
-        &quot;https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100057807671.0x000001/manifest.json&quot;: {
-            &quot;provider&quot;: &quot;The British Library&quot;
-        },
-        &quot;https://raw.githubusercontent.com/am2539/test-repository/master/Otho-Cotton%20Gospels&quot;: {
-            &quot;provider&quot;: &quot;am2539/test repository&quot;
-        },
-        &quot;https://dms-data.stanford.edu/data/manifests/Parker/qw038wz9710/manifest.json&quot;: {
-            &quot;provider&quot;: &quot;The Parker Library, Corpus Christi College, Cambridge&quot;
-        }
-    },
-    &quot;windows&quot;: [
-        {
-            &quot;id&quot;: &quot;a&quot;,
-            &quot;manifestId&quot;: &quot;https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100057807671.0x000001/manifest.json&quot;,
-            &quot;canvasIndex&quot;: 0
-        },
-        {
-            &quot;id&quot;: &quot;b&quot;,
-            &quot;manifestId&quot;: &quot;https://raw.githubusercontent.com/am2539/test-repository/master/Otho-Cotton%20Gospels&quot;,
-            &quot;canvasIndex&quot;: 53
-        },
-        {
-            &quot;id&quot;: &quot;c&quot;,
-            &quot;manifestId&quot;: &quot;https://dms-data.stanford.edu/data/manifests/Parker/qw038wz9710/manifest.json&quot;,
-            &quot;canvasIndex&quot;: 6
-        }
-    ],
-    &quot;workspace&quot;: {
-        &quot;layout&quot;: {
-            &quot;direction&quot;: &quot;row&quot;,
-            &quot;first&quot;: &quot;a&quot;,
-            &quot;second&quot;: {
-                &quot;first&quot;: &quot;b&quot;,
-                &quot;second&quot;: &quot;c&quot;,
-                &quot;direction&quot;: &quot;row&quot;
-            },
-            &quot;splitPercentage&quot;: 33.33
-        }
-    }
-}</code></pre>
-		<figcaption class=\"figure-caption\">The complete extension file used to define extra content included in this page.</figcaption>
-	</figure>	
-	</details></div><!--/span--></div><!--/row-->    <br/>
+<p>. The work recombining these two manuscripts has been featured in the BL's Medieval Manuscripts blog <a href='https://blogs.bl.uk/digitisedmanuscripts/2019/02/reconstructing-the-otho-corpus-gospels.html'>here</a> and on the Parker Library Blog <a href='https://theparkerlibrary.wordpress.com/2019/02/19/two-to-one-the-otho-corpus-gospels/'>here</a>.<div class="foonote"><ul></ul></div></div><!--/span--></div><!--/row-->    <br/>
 			</div><!--/span-->
 			
 			
