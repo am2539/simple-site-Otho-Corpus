@@ -15,17 +15,17 @@
 		{
                 "id": "a",
                 "manifestId": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100057807671.0x000001/manifest.json",
-                "canvasIndex": 142
+                "canvasIndex": 0
             },
 	    {
                 "id": "b",
            	"manifestId": "https://raw.githubusercontent.com/am2539/test-repository/master/Otho-Cotton%20Gospels",
-                "canvasIndex": 0
+                "canvasIndex": 53
             },         
 	    {
 	         "id": "c",
                 "manifestId": "https://dms-data.stanford.edu/data/manifests/Parker/qw038wz9710/manifest.json",
-                "canvasIndex": 0
+                "canvasIndex": 6
             }
     ],
      "workspace": {
