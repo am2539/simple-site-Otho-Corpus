@@ -6,7 +6,7 @@
 	},
 "Mirador viewer": {
 	"class": "mirador",
-	"file": "mirador.json",
+	"file": "mirador-complex.json",
 	"title": "Simple Site - The <b>IIIF Mirador Extension</b>",
 	"content": "<p>This extension uses the [IIIF|https:\/\/iiif.io] image viewer [Mirador|https:\/\/projectmirador.org\/] to produce a customised presentation of a bespoke selection of IIIF manifests[@@IIIF manifests are simply a structured list of web based images resources that can be viewed in a IIIF compliant viewer, for more details see https:\/\/iiif.io\/api\/presentation\/2.1\/#table-of-contents]. It is an example of a special page that can be added to the [pages.json|pages.json.html] file. To change the objects displayed in the viewer, modify the <b>mirador.json</b> file found in the build folder in your Github Repository. Further information on the function of the viewer can be found under [Extensions|Mirador.html] in the Technical Information section of this page.<\/p>\r\n\r\n<h3>The Example<\/h3>\r\n[##]\r\n<br\/>\r\n",
 	"displaycode": true
