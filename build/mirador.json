@@ -1,18 +1,18 @@
 {
 	"manifests": {
-		"https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100123802477.0x000001/manifest.json": {
+		"https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100057807671.0x000001/manifest.json": {
 			"provider": "The British Library"
 		},
-		"https://dms-data.stanford.edu/data/manifests/Parker/sk095st1718/manifest.json":{
+		"https://dms-data.stanford.edu/data/manifests/Parker/qw038wz9710/manifest.json":{
 			"provider": "The Parker Library, Corpus Christi College, Cambridge"
 		}
 	},
 	"windows": [{
-			"manifestId": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100123802477.0x000001/manifest.json",
+			"manifestId": "https://dms-data.stanford.edu/data/manifests/Parker/qw038wz9710/manifest.json",
 			"canvasIndex": 14
 		},
 		{
-			"manifestId": "https://dms-data.stanford.edu/data/manifests/Parker/sk095st1718/manifest.json",
+			"manifestId": "https://dms-data.stanford.edu/data/manifests/Parker/qw038wz9710/manifest.jsonn",
 			"canvasIndex": 69
 		}
 	]
