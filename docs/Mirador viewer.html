@@ -129,20 +129,20 @@ details[open] summary {
 	<figure>
 		<pre style="overflow-y: auto;overflow-x: hidden; border: 2px solid black;padding: 10px;max-height:400px;"><code>{
     &quot;manifests&quot;: {
-        &quot;https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100123802477.0x000001/manifest.json&quot;: {
+        &quot;https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100057807671.0x000001/manifest.json&quot;: {
             &quot;provider&quot;: &quot;The British Library&quot;
         },
-        &quot;https://dms-data.stanford.edu/data/manifests/Parker/sk095st1718/manifest.json&quot;: {
+        &quot;https://dms-data.stanford.edu/data/manifests/Parker/qw038wz9710/manifest.json&quot;: {
             &quot;provider&quot;: &quot;The Parker Library, Corpus Christi College, Cambridge&quot;
         }
     },
     &quot;windows&quot;: [
         {
-            &quot;manifestId&quot;: &quot;https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100123802477.0x000001/manifest.json&quot;,
+            &quot;manifestId&quot;: &quot;https://dms-data.stanford.edu/data/manifests/Parker/qw038wz9710/manifest.json&quot;,
             &quot;canvasIndex&quot;: 14
         },
         {
-            &quot;manifestId&quot;: &quot;https://dms-data.stanford.edu/data/manifests/Parker/sk095st1718/manifest.json&quot;,
+            &quot;manifestId&quot;: &quot;https://dms-data.stanford.edu/data/manifests/Parker/qw038wz9710/manifest.jsonn&quot;,
             &quot;canvasIndex&quot;: 69
         }
     ]
@@ -176,8 +176,8 @@ details[open] summary {
 
 var myMiradorInstance = Mirador.viewer({
        id: "mirador",
-       windows: [{"manifestId":"https:\/\/api.bl.uk\/metadata\/iiif\/ark:\/81055\/vdc_100123802477.0x000001\/manifest.json","canvasIndex":14},{"manifestId":"https:\/\/dms-data.stanford.edu\/data\/manifests\/Parker\/sk095st1718\/manifest.json","canvasIndex":69}],
-       manifests: {"https:\/\/api.bl.uk\/metadata\/iiif\/ark:\/81055\/vdc_100123802477.0x000001\/manifest.json":{"provider":"The British Library"},"https:\/\/dms-data.stanford.edu\/data\/manifests\/Parker\/sk095st1718\/manifest.json":{"provider":"The Parker Library, Corpus Christi College, Cambridge"}},
+       windows: [{"manifestId":"https:\/\/dms-data.stanford.edu\/data\/manifests\/Parker\/qw038wz9710\/manifest.json","canvasIndex":14},{"manifestId":"https:\/\/dms-data.stanford.edu\/data\/manifests\/Parker\/qw038wz9710\/manifest.jsonn","canvasIndex":69}],
+       manifests: {"https:\/\/api.bl.uk\/metadata\/iiif\/ark:\/81055\/vdc_100057807671.0x000001\/manifest.json":{"provider":"The British Library"},"https:\/\/dms-data.stanford.edu\/data\/manifests\/Parker\/qw038wz9710\/manifest.json":{"provider":"The Parker Library, Corpus Christi College, Cambridge"}},
        
        
        });     
